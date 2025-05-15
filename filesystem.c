@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 #define MAX_FILE_SIZE 2048
 #define MAX_LINES 256
 
@@ -101,24 +102,3 @@ void delete_file(const char* fs_filename, const char* target_filename) {
     fclose(new_fs);
 }
 
-// Пример main
-int main() {
-    const char* fs_name = "fs.txt";
-    FILE* fs = open_fs(fs_name);
-    if (!fs) {
-        printf("Не удалось открыть или создать файл\n");
-        return 1;
-    }
-    fclose(fs);
-
-    printf("Содержимое файла file1.txt:\n");
-    view_file(fs_name, "file1.txt");
-
-    printf("\nУдаление file1.txt...\n");
-    delete_file(fs_name, "file1.txt");
-
-    printf("\nПовторная проверка file1.txt:\n");
-    view_file(fs_name, "file1.txt");
-
-    return 0;
-}
