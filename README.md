@@ -35,5 +35,20 @@ void delete_file(const char* fs_filename, const char* target_filename)`
 - fs_filename (`const char*`) — имя файла файловой системы.
 - target_filename (`const char*`) — имя файла, который нужно удалить.
 
-Возвращает:
-- void — функция ничего не возвращает.
+void add_new_file(const char* fs_filename, const char* new_filename, const char* content_lines[], int content_count)`
+Добавляет новый файл в конец файловой системы.
+
+Параметры:
+- fs_filename (`const char*`)
+- new_filename (`const char*`)
+- content_lines[] (`const char*[]`) — массив строк
+- content_count (`int`) — количество строк
+
+void modify_file(const char* fs_filename, const char* target_filename, const char* new_content[], int new_count)`
+Заменяет содержимое файла новым.
+
+Параметры:
+- fs_filename (`const char*`)
+- target_filename (`const char*`)
+- new_content[] (`const char*[]`)
+- new_count (`int`)
