@@ -52,3 +52,12 @@ void modify_file(const char* fs_filename, const char* target_filename, const cha
 - target_filename (`const char*`)
 - new_content[] (`const char*[]`)
 - new_count (`int`)
+
+
+Использование библиотеки
+
+Мы предоставляем filesystem.c как библиотеку с заголовочным файлом filesystem.h.
+
+Вы можете подключить её к своему проекту с помощью:
+
+#include "filesystem.h"
